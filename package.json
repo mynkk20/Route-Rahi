@@ -1,0 +1,16 @@
+{
+  "name": "routerahi-sih-logistics",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Route राही - AI-Powered Resilient Disaster Logistics & Autonomous Rerouting Platform",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"magenta.bold,cyan.bold\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && (venv\\Scripts\\python.exe -m uvicorn main:app --reload --host 0.0.0.0 --port 8000 || python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000)",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "install:all": "npm install && cd frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
